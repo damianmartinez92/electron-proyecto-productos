@@ -1,0 +1,23 @@
+{
+  "name": "electron-proyecto-productos",
+  "version": "1.0.0",
+  "description": "proyecto en electron sobre registro de productos",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damianmartinez92/electron-proyecto-productos.git"
+  },
+  "author": "DamianMartinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damianmartinez92/electron-proyecto-productos/issues"
+  },
+  "homepage": "https://github.com/damianmartinez92/electron-proyecto-productos#readme",
+  "dependencies": {
+    "electron": "^5.0.7",
+    "electron-reload": "^1.4.1"
+  }
+}
