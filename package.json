@@ -4,7 +4,7 @@
   "description": "proyecto en electron sobre registro de productos",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron src/index.js"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/damianmartinez92/electron-proyecto-productos#readme",
   "dependencies": {
-    "electron": "^5.0.7",
-    "electron-reload": "^1.4.1"
+    "electron": "^4.0.0",
+    "electron-reload": "^1.4.1",
+    "requirejs": "^2.3.6"
   }
 }

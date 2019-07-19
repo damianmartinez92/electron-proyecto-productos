@@ -1,1 +1,54 @@
-<h1>Add a new product</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>Add A New Product</title>
+</head>
+<body>
+
+    <form class="p-4">
+        <div class="form-group">
+            <input type="text" id="name" class="form-control" placeholder="Product's Name">
+        </div>
+        <div class="form-group">
+            <input type="text" id="price" class="form-control" placeholder="Price">
+        </div>
+        <div class="form-group">
+            <input type="text" id="description" class="form-control" placeholder="Description">
+        </div>
+        <button class="btn btn-primary btn-block">Save Product</button>
+    </form>
+
+    <script>
+        // Se necesita del ipcRenderer para pasar la informacion al Main con 'send()'
+        const { ipcRenderer } = require('electron')
+
+        const form = document.querySelector('form')
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+
+            // Se toma los values de los input
+            const nameProduct = document.querySelector('#name').value
+            const priceProduct = document.querySelector('#price').value
+            const descriptionProduct = document.querySelector('#description').value
+
+            // Se crea un objeto con los valores
+            const newProduct = {
+                name: nameProduct,
+                price: priceProduct,
+                description: descriptionProduct
+            }
+
+            console.log(newProduct)
+            // // Se envía el objeto {newProduct} como 'product:new' al Main para ser mostrados en la pantalla principal
+            ipcRenderer.send('product:new', newProduct)
+        })
+    
+    </script>
+
+
+</body>
+</html>
