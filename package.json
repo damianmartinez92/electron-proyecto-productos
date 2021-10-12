@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/damianmartinez92/electron-proyecto-productos#readme",
   "dependencies": {
-    "electron": "^5.0.0",
+    "electron": "^11.5.0",
     "electron-packager": "^14.0.2",
     "electron-reload": "^1.4.1",
     "requirejs": "^2.3.6"
